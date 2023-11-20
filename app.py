@@ -6,8 +6,9 @@ app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST'])
 def index():
     if request.method=='POST':
-        customInput = request.form['customInput']
-        return jsonify({'output': customInput.upper()})
+        # customInput = request.form['customInput']
+        customInput = "Your New Password is aabbccssdddd"
+        return jsonify({'output': customInput})
 
     return render_template('index.html')
 

@@ -10,7 +10,7 @@
 <h1>Password Generator</h1>
 
 <form id="form">
-    <input type="text" id="textInput" />
+    <!-- <input type="text" id="textInput" /> -->
     <button type="submit" name="button">Submit</button>
 </form>
 
@@ -21,7 +21,7 @@
         $('#form').on('submit', function(e){
             $.ajax({
                 data: {
-                    customInput: $('#textInput').val()
+                    // customInput: $('#textInput').val()
                 },
                 type: 'POST',
                 url: '/'
