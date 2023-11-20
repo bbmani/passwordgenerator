@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.customCard{
+    border: 2px solid black;
+    padding: 5%;
+    margin-top: 20%;
+    border-radius: 10px;
+    color: white;
+}
+
+.pass-gen-header{
+    font-weight: 700;
+}
+
+.copy-button{
+    background: none;
+    color: inherit;
+    border: none;   
+}

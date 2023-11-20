@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Password Generator</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}" />
 </head>
 <body>
-<h1>Password Generator</h1>
 
-<form id="form">
-    <!-- <input type="text" id="textInput" /> -->
-    <button type="submit" name="button">Submit</button>
-</form>
 
-<div id="output"></div>
+<div class="container">
+    <div class="customCard">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="pass-gen-header">Password Generator</h1>
+                <p class="pass-gen-subtext">Standard rule for passwords, is to never use the same password for more than one website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam libero aliquid inventore quisquam quod veniam officiis, dignissimos quis earum quasi adipisci nobis accusamus. Dolores accusamus qui, rerum quas a quod?</p>
+                <form id="form">
+                    <button type="submit" name="button" class="btn btn-success">Generate</button>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <!-- <div id="output"></div> -->
+                <p><span id="output"></span><button type="button" class="copy-button" sonclick="copy_data(output)"><img style="width: 80%;" src="{{url_for('static',filename='icons8-copy-64.png')}}"></button></p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<script>
-    $(document).ready(function(){
-        $('#form').on('submit', function(e){
-            $.ajax({
-                data: {},
-                type: 'POST',
-                url: '/'
-            })
-            .done(function(data){
-                $('#output').text(data['output']).show();
-            });
-            e.preventDefault()
-        });
-    });
-</script>
 
+<script src="{{url_for('static', filename='functions.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
