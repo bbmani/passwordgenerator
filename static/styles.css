@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -21,7 +21,88 @@ body {
 }
 
 .copy-button{
-    background: none;
-    color: inherit;
-    border: none;   
+    margin-top: 15px;
+}
+
+.copy-button-style{
+    text-align: center;
+}
+
+.center {
+    position: relative;
+    height: 200px;
+}
+
+.center p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    text-align: center;
+    padding: 5%;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .pass-gen-header{
+        font-size: 50px;
+    }
+
+    .pass-gen-subtext{
+        font-size: 25px;
+    }
+
+    .center p{
+        font-size: 25px;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .pass-gen-header{
+        font-size: 30px;
+    }
+
+    .pass-gen-subtext{
+        font-size: 30px;
+    }
+
+    .center p{
+        font-size: 25px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .pass-gen-header{
+        font-size: 30px;
+    }
+
+    .pass-gen-subtext{
+        font-size: 20px;
+    }
+
+    .center p{
+        font-size: 20px;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .pass-gen-header{
+        font-size: 30px;
+    }
+
+    .pass-gen-subtext{
+        font-size: 20px;
+    }
+
+    .center p{
+        font-size: 25px;
+    }
 }
