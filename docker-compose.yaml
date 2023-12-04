@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  web:
+    build: .
+    ports:
+      - "6969:6969"
+    volumes:
+      - .:/password-generator
+    command: python3 app.py
